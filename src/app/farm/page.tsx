@@ -60,7 +60,7 @@ const OurFarmsPage = () => {
         <div className="relative text-center mb-20">
           <div className="relative h-[70vh] w-full rounded-3xl overflow-hidden shadow-2xl">
             <Image
-              src="/images/catfish.jpg"
+              src="/images/sample-15.jpeg"
               alt="Aquatic Farming Facility"
               fill
               priority

@@ -89,13 +89,13 @@ const AboutUsPage = () => {
           <h2 className="text-4xl font-bold text-white">Follow Us</h2>
           <p className="text-lg text-gray-400">We’d love to connect with you! Reach out through any of these platforms:</p>
           <div className="flex justify-center gap-6 mt-3">
-            <a href="https://facebook.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition">
+            <a href="https://www.facebook.com/share/1DH9zpprdc/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition">
               <Facebook size={32} />
             </a>
-            <a href="https://instagram.com/yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400 transition">
+            <a href="https://www.instagram.com/lumii__aquarium_/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400 transition">
               <Instagram size={32} />
             </a>
-            <a href="https://tiktok.com/@yourpage" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition">
+            <a href="https://www.tiktok.com/@lumii__aquarium_?_t=ZS-8z1vQaISUr4&_r=1" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition">
               <FaTiktok size={32} />
             </a>
           </div>

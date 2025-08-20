@@ -83,21 +83,21 @@ const Footer = () => {
           <div className="flex justify-center md:justify-start space-x-4">
             {/* Facebook */}
             <a
-              href="#"
+              href="https://www.facebook.com/share/1DH9zpprdc/"
               className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
             >
               <Facebook className="w-6 h-6" />
             </a>
             {/* Instagram */}
             <a
-              href="#"
+              href="https://www.instagram.com/lumii__aquarium_/"
               className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
             >
               <Instagram className="w-6 h-6" />
             </a>
             {/* TikTok */}
             <a
-              href="#"
+              href="https://www.tiktok.com/@lumii__aquarium_?_t=ZS-8z1vQaISUr4&_r=1"
               className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
             >
               <Music2 className="w-6 h-6" />

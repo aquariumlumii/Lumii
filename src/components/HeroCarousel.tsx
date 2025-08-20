@@ -2,112 +2,79 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import Link from "next/link"; 
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 const slides = [
   {
     id: 1,
-    bg: "/images/bg 1.jpg",
-    fg: "/images/fg 9.png", // ✅ foreground image
-    title: "All cared for with love",
-    text: "From vibrant tropicals to rare species, discover healthy fish for your aquarium.",
+    bg: "/images/bg 3.jpeg",
+    fg: "/images/fg 13.png",
+    title: "Where healthy fish begin their journey",
+    text: "Growing healthy, disease-free, and ready to bring life to your aquarium.",
     button: "View Collection",
      href: "/products",
-    cards: [
-      {
-        id: "c1",
-        img: "/images/fg 1.png",
-        title: "Looking for aquarium specialists?",
-        text: "Each fish is cared for with attention, so you can enjoy a thriving, active, and vibrant addition to your tank.",
-        button: "Contact Us Now!",
-         href: "/contact",
-      },
-      {
-        id: "c2",
-        img: "",
-        title: "Natural Care",
-        text: "Our fish grow in natural-like freshwater for health and vibrancy.",
-        button: "Who We Are",
-        href: "/about",
-      },
-      {
-        id: "c3",
-        img: "",
-        title: "",
-        text: "",
-        button: "",
-        video: true,
-      },
-    ],
   },
   {
     id: 2,
     bg: "/images/bg 5.jpg",
-    fg: "/images/fg 10.png", // ✅ foreground image
-    title: "All cared for with love",
-    text: "From vibrant tropicals to rare species, discover healthy fish for your aquarium.",
+    fg: "/images/fg 10.png",
+    title: "Where Nature Meets Elegance",
+    text: "From dazzling tropicals to rare beauties, each fish matures gracefully, stays calm, and is ready to bring elegance to your aquarium",
     button: "View Collection",
     href: "/products",
-    cards: [
-      {
-        id: "c1",
-        img: "/images/fg 6.png",
-        title: "Trusted by Fish Lovers",
-        text: "We focus on the highest standards of quality, health, and attentive care, ensuring that every fish in your aquarium thrives, bringing vibrant colors, lively activity, and lasting beauty for years to come.",
-        button: "Know More...",
-        href: "/about",
-      },
-      {
-        id: "c2",
-        img: "",
-        title: "Peaceful, Colorful, Alive",
-        text: "We raise and care for fish with love so you can enjoy a thriving aquarium.",
-        button: "Reach Out",
-        href: "/contact",
-      },
-      {
-        id: "c3",
-        img: "",
-        title: "",
-        text: "",
-        button: "",
-        video: true,
-      },
-    ],
+  },
+    {
+    id: 3,
+    bg: "/images/bg 5.jpg",
+    fg: "/images/fg 11.png",
+    title: "Where Nature Meets Elegance",
+    text: "From dazzling tropicals to rare beauties, each fish matures gracefully, stays calm, and is ready to bring elegance to your aquarium",
+    button: "View Collection",
+    href: "/products",
   },
 ];
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
-  const [firstLoad, setFirstLoad] = useState(true);
 
   useEffect(() => {
-    const firstLoadTimer = setTimeout(() => setFirstLoad(false), 4000);
     const slideTimer = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
     }, 8000);
 
     return () => {
-      clearTimeout(firstLoadTimer);
       clearInterval(slideTimer);
     };
   }, []);
 
   const slide = slides[index];
 
-  // Animations (same as your code)
-  const bgVariants = { enter: { y: "-100%", opacity: 0 }, center: { y: "0%", opacity: 1 }, exit: { y: "100%", opacity: 0 } };
-  const fgVariants = { enter: { y: "-100%", opacity: 0 }, center: { y: "0%", opacity: 1 }, exit: { y: "100%", opacity: 0 } };
-  // const cardVariants = {
-  //   hidden: { opacity: 0, y: 40 },
-  //   visible: (i: number) => ({ opacity: 1, y: 0, transition: { delay: 1 + i * 0.3, duration: 0.5 } }),
-  //   exit: { opacity: 0, y: 40, transition: { duration: 0.5 } },
-  // };
-  const leftVariants = {
+  // Animation variants
+  const bgVariants = {
+    enter: { y: "-100%", opacity: 0 },
+    center: { y: "0%", opacity: 1 },
+    exit: { y: "100%", opacity: 0 },
+  };
+
+  const fgVariants = {
+    enter: { y: "-100%", opacity: 0 },
+    center: { y: "0%", opacity: 1 },
+    exit: { y: "100%", opacity: 0 },
+  };
+
+  const textVariants = {
     hidden: { opacity: 0, x: -40 },
-    visible: (i: number) => ({ opacity: 1, x: 0, transition: { delay: 1.2 + i * 0.2, duration: 0.6 } }),
-    stay: { opacity: 1, x: 0 },
+    visible: (i: number) => ({
+      opacity: 1,
+      x: 0,
+      transition: { delay: 0.5 + i * 0.2, duration: 0.8 },
+    }),
+    exit: {
+      opacity: 0,
+      x: -40,
+      transition: { duration: 0.3 },
+    },
   };
 
   return (
@@ -133,73 +100,73 @@ export default function Hero() {
         </motion.div>
       </AnimatePresence>
 
-      {/* Foreground */}
-      <AnimatePresence mode="sync">
-        {slide.fg && (
-          <motion.div
-            key={`fg-${slide.id}`}
-            className="absolute inset-0 flex items-center justify-center"
-            variants={fgVariants}
-            initial="enter"
-            animate="center"
-            exit="exit"
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-          >
-            <Image
-              src={slide.fg}
-              alt="Aquarium foreground"
-              width={400}
-              height={200}
-              className="object-contain pointer-events-none"
-              priority
-            />
-          </motion.div>
-        )}
-      </AnimatePresence>
-
-      <div className="relative z-10 flex flex-col md:flex-row items-center justify-between h-full px-6 md:px-12 gap-8">
+      {/* Unified Layout Container */}
+      <div className="relative z-10 flex flex-col md:flex-row items-center justify-center md:justify-between h-full px-6 md:px-12 gap-4 md:gap-8">
         {/* Left text */}
-<div className="text-white max-w-lg text-center md:text-left mt-16 md:mt-10">
-  {[slide.title, slide.text, slide.button].map((item, i) => (
-    <motion.div
-      key={`${slide.id}-${i}`}
-      variants={leftVariants}
-      initial={firstLoad ? "hidden" : "false"}   // only animate first time
-      animate={firstLoad ? "visible" : "stay"}  // stay static afterwards
-      custom={i}
-      className="mb-4"
-    >
-{ i === 0 && (
-  <h1
-    className="
-      font-bold 
-      text-white 
-      leading-[27px] text-[25px]  /* mobile */
-      md:leading-[54px] md:text-[49px] /* desktop */
-      whitespace-nowrap
-    "
-    style={{ fontFamily: 'Montserrat, sans-serif' }}
-  >
-    {item}
-  </h1>
-)}
+        <div className="text-white max-w-lg text-center md:text-left mt-20 md:mt-0">
+          <AnimatePresence mode="wait">
+            {[slide.title, slide.text, slide.button].map((item, i) => (
+              <motion.div
+                key={`${slide.id}-${i}`}
+                variants={textVariants}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                custom={i}
+                className="mb-4"
+              >
+                {i === 0 && (
+                  <h1
+                    className="
+                      font-bold text-white
+                      leading-tight text-3xl
+                      md:leading-[54px] md:text-[49px]
+                    "
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                  >
+                    {item}
+                  </h1>
+                )}
+                {i === 1 && <p className="text-base md:text-lg mt-4 font-serif text-gray-300">{item}</p>}
+                {i === 2 && slide.href && (
+                  <Link
+                    href={slide.href}
+                    className="inline-block px-4 md:px-6 py-2 md:py-3 bg-teal-600 rounded-lg shadow-lg font-semibold mt-4 text-sm md:text-base"
+                  >
+                    {item}
+                  </Link>
+                )}
+              </motion.div>
+            ))}
+          </AnimatePresence>
+        </div>
 
-      {i === 1 && (
-        <p className="text-base md:text-lg mt-4 font-serif text-gray-300">
-          {item}
-        </p>
-      )}
-      {i === 2 && slide.href && (
-        <Link
-          href={slide.href}
-          className="inline-block px-4 md:px-6 py-2 md:py-3 bg-teal-600 rounded-lg shadow-lg font-semibold mt-4 text-sm md:text-base"
-        >
-          {item}
-        </Link>
-      )}
-    </motion.div>
-  ))}
-</div>
+        {/* ✅ STABLE CONTAINER for Foreground Image */}
+        <div className="relative w-[400px] h-[800px] md:w-[400px] md:h-[600px]">
+          <AnimatePresence mode="sync">
+            {slide.fg && (
+              <motion.div
+                key={`fg-${slide.id}`}
+                className="absolute inset-0" // ✅ Position image within stable container
+                variants={fgVariants}
+                initial="enter"
+                animate="center"
+                exit="exit"
+                transition={{ duration: 1.5, ease: "easeInOut" }}
+              >
+                <Image
+                  src={slide.fg}
+                  alt="Aquarium foreground"
+                  width={800}
+                  height={400}
+                  className="object-contain pointer-events-none w-full h-full"
+                  priority
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
+
 
 
         {/* Right cards */}

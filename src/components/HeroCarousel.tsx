@@ -170,7 +170,6 @@
 //     </div>
 //   );
 // }
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -197,7 +196,7 @@ const slides = [
     button: "View Collection",
     href: "/products",
   },
-  {
+    {
     id: 3,
     bg: "/images/bg 5.jpg",
     fg: "/images/fg 11.png",
@@ -211,6 +210,21 @@ const slides = [
 export default function Hero() {
   const [index, setIndex] = useState(0);
 
+  // ✅ PRELOAD IMAGES ON COMPONENT MOUNT
+  useEffect(() => {
+    slides.forEach((slide) => {
+      // Preload background images
+      const bgImg = new window.Image();
+      bgImg.src = slide.bg;
+      // Preload foreground images
+      if (slide.fg) {
+        const fgImg = new window.Image();
+        fgImg.src = slide.fg;
+      }
+    });
+  }, []);
+
+
   useEffect(() => {
     const slideTimer = setInterval(() => {
       setIndex((prev) => (prev + 1) % slides.length);
@@ -223,6 +237,7 @@ export default function Hero() {
 
   const slide = slides[index];
 
+  // ... (the rest of your component code is the same)
   // Animation variants
   const bgVariants = {
     enter: { y: "-100%", opacity: 0 },
@@ -236,29 +251,17 @@ export default function Hero() {
     exit: { y: "100%", opacity: 0 },
   };
 
-  // ✅ Parent variant to orchestrate children animations
-  const textContainerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.5,
-        staggerChildren: 0.2,
-      },
-    },
-    exit: {
-      opacity: 0,
-      transition: { duration: 0.3 },
-    },
-  };
-
-  // ✅ Child variant for individual text elements
   const textVariants = {
     hidden: { opacity: 0, x: -40 },
-    visible: {
+    visible: (i: number) => ({
       opacity: 1,
       x: 0,
-      transition: { duration: 0.8 },
+      transition: { delay: 0.5 + i * 0.2, duration: 0.8 },
+    }),
+    exit: {
+      opacity: 0,
+      x: -40,
+      transition: { duration: 0.3 },
     },
   };
 
@@ -275,7 +278,6 @@ export default function Hero() {
           exit="exit"
           transition={{ duration: 1.5, ease: "easeInOut" }}
         >
-          {/* ✅ Corrected Image prop: 'fill' instead of 'layout' */}
           <Image src={slide.bg} alt="Aquarium background" fill className="object-cover" priority />
           <motion.div
             className="absolute inset-0 bg-black/70"
@@ -290,49 +292,50 @@ export default function Hero() {
       <div className="relative z-10 flex flex-col md:flex-row items-center justify-center md:justify-between h-full px-6 md:px-12 gap-4 md:gap-8">
         {/* Left text */}
         <div className="text-white max-w-lg text-center md:text-left mt-20 md:mt-0">
-          {/* ✅ Corrected AnimatePresence structure */}
           <AnimatePresence mode="wait">
-            <motion.div
-              key={slide.id} // Key is on the single parent
-              variants={textContainerVariants}
-              initial="hidden"
-              animate="visible"
-              exit="exit"
-            >
-              <motion.h1
+            {[slide.title, slide.text, slide.button].map((item, i) => (
+              <motion.div
+                key={`${slide.id}-${i}`}
                 variants={textVariants}
-                className="font-bold text-white leading-tight text-3xl md:leading-[54px] md:text-[49px] mb-4"
-                style={{ fontFamily: "Montserrat, sans-serif" }}
+                initial="hidden"
+                animate="visible"
+                exit="exit"
+                custom={i}
+                className="mb-4"
               >
-                {slide.title}
-              </motion.h1>
-              <motion.p
-                variants={textVariants}
-                className="text-base md:text-lg mt-4 font-serif text-gray-300 mb-4"
-              >
-                {slide.text}
-              </motion.p>
-              {slide.href && (
-                <motion.div variants={textVariants}>
+                {i === 0 && (
+                  <h1
+                    className="
+                      font-bold text-white
+                      leading-tight text-3xl
+                      md:leading-[54px] md:text-[49px]
+                    "
+                    style={{ fontFamily: 'Montserrat, sans-serif' }}
+                  >
+                    {item}
+                  </h1>
+                )}
+                {i === 1 && <p className="text-base md:text-lg mt-4 font-serif text-gray-300">{item}</p>}
+                {i === 2 && slide.href && (
                   <Link
                     href={slide.href}
                     className="inline-block px-4 md:px-6 py-2 md:py-3 bg-teal-600 rounded-lg shadow-lg font-semibold mt-4 text-sm md:text-base"
                   >
-                    {slide.button}
+                    {item}
                   </Link>
-                </motion.div>
-              )}
-            </motion.div>
+                )}
+              </motion.div>
+            ))}
           </AnimatePresence>
         </div>
 
-        {/* Foreground Image */}
+        {/* ✅ STABLE CONTAINER for Foreground Image */}
         <div className="relative w-[400px] h-[800px] md:w-[400px] md:h-[600px]">
           <AnimatePresence>
             {slide.fg && (
               <motion.div
                 key={`fg-${slide.id}`}
-                className="absolute inset-0"
+                className="absolute inset-0" // ✅ Position image within stable container
                 variants={fgVariants}
                 initial="enter"
                 animate="center"

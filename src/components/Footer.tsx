@@ -24,9 +24,9 @@ const Footer = () => {
 </div>
 
           <p className="text-sm">
-            We are dedicated to providing the highest quality aquatic life and
-            supplies. Our mission is to promote sustainable aquaculture and a
-            passion for the underwater world.
+            Lumii Aquarium specializes in breeding and exporting freshwater ornamental fish. 
+            With strict care, quarantine, and global standards, we deliver young, healthy, and 
+            vibrant species to aquariums worldwide with confidence.
           </p>
           <div className="flex justify-center md:justify-start space-x-4 text-sm mt-4">
             <Link href="/" className="hover:text-white transition-colors duration-300">

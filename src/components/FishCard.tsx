@@ -12,12 +12,17 @@ return (
 className="border rounded-lg overflow-hidden font-serif shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
 onClick={() => onCardClick(fish)}
 >
-<div className="relative w-full aspect-[4/3] overflow-hidden">
+{/* <div className="relative w-full aspect-[4/3] overflow-hidden"> */}
+<div className="w-full overflow-hidden">
 <Image
 src={fish.primaryImage}
 alt={fish.name}
-fill
-className="object-cover group-hover:scale-105 transition-transform duration-300"
+width={fish.width}
+height={fish.height}
+// fill
+sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+// className="object-cover group-hover:scale-105 transition-transform duration-300"
+className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
 />
 </div>
 <div className="p-4 bg-white">

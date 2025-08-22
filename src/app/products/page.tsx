@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+// import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search } from 'lucide-react';
+// import { Search } from 'lucide-react';
 
 // Data and Type Imports
 import { fishData } from '@/data/fishData';
@@ -20,13 +20,6 @@ const categories = [
   { id: 'Crew', name: 'Crew' },
 ];
 
-// // --- KEY CONSTANTS FOR CALCULATION ---
-// // These must match the values in your tailwind.config.ts and general styling
-// const GRID_ROW_HEIGHT = 40;      // Matches 'grid-auto-rows' in your plugin
-// const GRID_COLUMN_MIN_WIDTH = 250; // Matches 'minmax(300px, 1fr)' in your plugin
-// const GRID_GAP = 30;             // Matches 'grid-gap' (2rem = 32px)
-// // Estimate the height of the text content below the image in FishCard
-// const CARD_CONTENT_ESTIMATE = 100;
 
 const GalleryPage = () => {
   // State for filtering
@@ -72,7 +65,7 @@ const GalleryPage = () => {
         <div className="container mx-auto">
 
           {/* Filter Buttons */}
-          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12">
+          <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-12 mt-8">
             {categories.map((category) => (
               <button
                 key={category.id}

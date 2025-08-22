@@ -9,9 +9,9 @@ export const FishCard = ({ fish, onCardClick }: FishCardProps) => {
 return (
 // The <Link> is replaced with a <div> that has an onClick handler.
 <div
-className="border rounded-lg overflow-hidden font-serif shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer group"
-onClick={() => onCardClick(fish)}
->
+className="border rounded-lg overflow-hidden font-serif shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer group break-inside-avoid mb-8"
+      onClick={() => onCardClick(fish)}
+    >
 {/* <div className="relative w-full aspect-[4/3] overflow-hidden"> */}
 <div className="w-full overflow-hidden">
 <Image
@@ -25,10 +25,10 @@ sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
 className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
 />
 </div>
-<div className="p-4 bg-white">
+{/* <div className="p-4 bg-white">
 <h3 className="font-bold text-lg text-[#0D1B2A]">{fish.name}</h3>
 <p className="text-sm text-gray-500">{fish.category}</p>
-</div>
+</div> */}
 </div>
 );
 };

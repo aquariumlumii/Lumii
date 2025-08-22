@@ -35,7 +35,7 @@ export const fishData: Fish[] = [
     category: 'Glow',
     species: 'Symphysodon',
     description: 'Known as the “king of freshwater aquariums,” Discus are round, flat-bodied cichlids with vibrant colors and patterns. They require very clean, warm water and thrive in groups.',
-    width: 800,
+    width: 400,
     height: 400,
   },
   {
@@ -45,7 +45,7 @@ export const fishData: Fish[] = [
     category: 'Glow',
     species: 'Betta splendens',
     description: 'opular for their long, flowing fins and aggressive behavior, Betta fish are territorial and best kept alone or with very peaceful tank mates.',
-    width: 800,
+    width: 400,
     height: 400, 
   },
   {
@@ -75,8 +75,8 @@ export const fishData: Fish[] = [
     category: 'Glow',
     species: '',
     description: 'Peaceful fish with a labyrinth organ that lets them breathe air. They come in many colorful varieties and prefer planted tanks.',
-    width: 800,
-    height: 400,
+    width: 400,
+    height: 600,
     },
   {
     id: 7,
@@ -86,7 +86,7 @@ export const fishData: Fish[] = [
     species: 'Poecilia reticulata',
     description: 'Small, hardy livebearers famous for their bright colors and flowing tails. They breed easily and are great for beginners.',
     width: 800,
-    height: 400,
+    height: 600,
     },
   {
     id: 8,
@@ -116,7 +116,7 @@ export const fishData: Fish[] = [
     species: '',
     description: 'Active schooling fish, often brightly colored. Some species can be fin-nippers, so tank mates must be chosen carefully.',
     width: 800,
-    height: 400,
+    height: 600,
     },
     {
     id: 11,
@@ -126,7 +126,7 @@ export const fishData: Fish[] = [
     species: 'Mikrogeophagus ramirezi',
     description: 'Popular and vibrant dwarf cichlid native to the Orinoco River basin in Venezuela and Colombia, South America. It is a beloved species in the aquarium hobby, admired for its striking colors and interesting behavior.',
     width: 800,
-    height: 400,
+    height: 600,
     },    
   {
     id: 12,
@@ -135,8 +135,8 @@ export const fishData: Fish[] = [
     category: 'Glow',
     species: '',
     description: 'A large group of small, schooling fish. They are peaceful, colorful, and do best in groups, adding movement to community tanks.',
-    width: 800,
-    height: 400,
+    width: 400,
+    height: 800,
     },
       {
     id: 13,
@@ -156,8 +156,8 @@ export const fishData: Fish[] = [
     category: 'Pattern',
     species: 'Pterophyllum scalare',
     description: 'Graceful cichlids with tall, triangular bodies. They are semi-aggressive but make striking additions to community tanks.',
-    width: 800,
-    height: 400,
+    width: 400,
+    height: 800,
     },
         {
     id: 15,
@@ -167,7 +167,7 @@ export const fishData: Fish[] = [
     species: 'fish',
     description: 'A large group of bottom-dwelling fish, often with whisker-like barbels. Popular species like Corydoras and Plecos are peaceful and useful for cleaning algae or debris.',
     width: 800,
-    height: 400,
+    height: 300,
   },
   // add more as needed, keeping absolute paths starting with `/`
 ];

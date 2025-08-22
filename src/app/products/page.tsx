@@ -11,6 +11,7 @@ import type { Fish } from '@/data/fishData';
 
 // Component Imports
 import { FishModal } from '@/components/FishModal'; // <-- Import the modal component
+import { FishCard } from '@/components/FishCard';
 
 const categories = [
   { id: 'all', name: 'All Species' },
@@ -18,6 +19,14 @@ const categories = [
   { id: 'Pattern', name: 'Pattern' },
   { id: 'Crew', name: 'Crew' },
 ];
+
+// // --- KEY CONSTANTS FOR CALCULATION ---
+// // These must match the values in your tailwind.config.ts and general styling
+// const GRID_ROW_HEIGHT = 40;      // Matches 'grid-auto-rows' in your plugin
+// const GRID_COLUMN_MIN_WIDTH = 250; // Matches 'minmax(300px, 1fr)' in your plugin
+// const GRID_GAP = 30;             // Matches 'grid-gap' (2rem = 32px)
+// // Estimate the height of the text content below the image in FishCard
+// const CARD_CONTENT_ESTIMATE = 100;
 
 const GalleryPage = () => {
   // State for filtering
@@ -82,8 +91,12 @@ const GalleryPage = () => {
           </div>
 
           {/* Image Grid */}
-          <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <AnimatePresence mode="popLayout">
+          {/* <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"> */}
+          <motion.div
+            layout
+            className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-8"
+          >
+            {/* <AnimatePresence mode="popLayout">
               {filtered.map((item) => (
                 <motion.div
                   layout
@@ -108,6 +121,26 @@ const GalleryPage = () => {
                       {item.name}
                     </p>
                   </div>
+                </motion.div>
+              ))}
+            </AnimatePresence> */}
+
+             <AnimatePresence>
+              {filtered.map((item) => (
+                // The motion.div wrapper is now simpler
+                <motion.div
+                  layout
+                  key={item.id}
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  exit={{ opacity: 0, scale: 0.8 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  {/* We no longer calculate anything, just render the card. */}
+                  <FishCard
+                    fish={item}
+                    onCardClick={handleOpenModal}
+                  />
                 </motion.div>
               ))}
             </AnimatePresence>

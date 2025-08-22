@@ -1,5 +1,6 @@
 // tailwind.config.ts
 import type { Config } from 'tailwindcss';
+import plugin from 'tailwindcss/plugin'; 
 
 const config: Config = {
   darkMode: "class",
@@ -56,6 +57,17 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+       plugin(function({ addUtilities }) {
+      addUtilities({
+        '.grid-masonry': {
+          'display': 'grid',
+          'grid-gap': '2rem', // You can adjust this gap
+          'grid-template-columns': 'repeat(auto-fill, minmax(300px, 1fr))',
+          'grid-auto-rows': '20px', // The fundamental unit of row height
+        }
+      })
+    })
+  ],
 };
 export default config;

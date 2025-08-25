@@ -235,10 +235,22 @@ const Header = () => {
           </nav>
 
           {/* Desktop Contact Info */}
-          <div className="hidden md:flex items-center space-x-2">
+          {/* <div className="hidden md:flex items-center space-x-2">
             <Mail size={20} className="text-teal-300" />
             <span>lumii.go2@gmail.com</span>
-          </div>
+          </div> */}
+ <div className="hidden md:flex items-center space-x-2">
+  <a
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=lumii.go2@gmail.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center space-x-2 hover:underline text-inherit"
+  >
+    <Mail size={20} className="text-teal-300" />
+    <span>lumii.go2@gmail.com</span>
+  </a>
+</div>
+
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">

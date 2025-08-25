@@ -162,16 +162,16 @@ const HomePage = () => {
           <section className="py-20 bg-[#0c0c0c]">
               <h2 className="text-4xl font-bold font-serif text-white mb-4 text-center">Welcome to Lumii Aquarium</h2>
 
-                            <div className="flex flex-col font-serif px-4 sm:px-6 lg:flex-row items-center gap-12 lg:gap-24 my-24">
+                            <div className="flex flex-col font-serif px-4 sm:px-6 lg:flex-row items-center gap-12 lg:gap-24 my-24 text-center mb-12">
                               <div className="lg:w-1/2">
                                 
-                                <p className="text-lg text-gray-300 mb-4 text-justify">
+                                <p className="text-lg text-gray-300 mb-4 lg:text-justify">
                                 Welcome to Lumii Aquarium
                                 At Lumii, we open the door to a vibrant world of freshwater ornamental fish, carefully bred and nurtured in clean, natural environments. 
                                 Our commitment goes beyond simply raising fish—we ensure every species grows in healthy conditions with the right balance of nutrition, 
                                 water quality, and care.                              
                                 </p>
-                                <p className="text-lg text-gray-300 text-justify">
+                                <p className="text-lg text-gray-300 lg:text-justify">
                                 By maintaining strict standards for growth, health, and temperament, 
                                 we deliver fish that are not only beautiful but also calm, strong, and disease-free. 
                                 Whether you seek dazzling tropicals or rare varieties, Lumii Aquarium is where quality begins and elegance finds its way into your aquarium.                           

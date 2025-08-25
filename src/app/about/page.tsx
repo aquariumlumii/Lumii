@@ -11,7 +11,7 @@ const AboutUsPage = () => {
         <section className="flex flex-col lg:flex-row items-center gap-8 border-b border-gray-700 pb-12 pt-12">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-5xl font-bold text-white mb-4">Who We Are</h1>
-            <p className="text-lg text-gray-300 mb-4 text-justify">
+            <p className="text-lg text-gray-300 mb-4 lg:text-justify">
               Lumii Aquarium is built on a passion for freshwater ornamental fish and a belief that aquariums can bring life, 
               calmness, and beauty into any space. From the beginning, our focus has been on quality—raising fish that are vibrant, 
               healthy, and naturally balanced. Each fish we provide reflects our values of responsibility, care, and professionalism,
@@ -45,7 +45,7 @@ const AboutUsPage = () => {
             <h2 className="text-4xl font-bold text-white mb-4">
               Our Mission
             </h2>
-            <p className="text-lg text-gray-300 mb-4 text-justify">
+            <p className="text-lg text-gray-300 mb-4 lg:text-justify">
             At Lumii, our mission is to share this elegance with the world by ensuring every fish is raised to the highest standards 
             of health and quality. We do not send aged or overgrown fish; instead, we raise them in natural freshwater with the right 
             nutrition and care so they reach maturity within a healthy timeframe. Our goal is for customers to receive fish that are 
@@ -59,14 +59,14 @@ const AboutUsPage = () => {
         <section className="flex flex-col lg:flex-row items-center gap-8 border-b border-gray-700 pb-12">
           <div className="flex-1 text-center lg:text-left">
             <h2 className="text-4xl font-bold text-white mb-4">Our Story</h2>
-            <p className="text-lg text-gray-300 mb-4 text-justify">
+            <p className="text-lg text-gray-300 mb-4 lg:text-justify">
             What began as a single stall tank for personal enjoyment slowly grew into something far greater. 
             As our passion deepened, one tank became many, and soon the idea of export took root. From the very start, 
             we challenged ourselves with the most delicate species—Discus fish—and through that experience we learned the realities 
             of breeding: the risks, the diseases, and the importance of water quality for every species. Each difficulty became 
             a lesson, shaping our understanding and strengthening our resolve.          
             </p>
-            <p className="text-lg text-gray-300 mb-4 text-justify">
+            <p className="text-lg text-gray-300 mb-4 lg:text-justify">
               With every step, we have grown stronger, turning our early challenges into expertise and building Lumii into the company 
               it is today. What started as a small hobby has now become a journey of care, professionalism, and a dedication to sharing 
               the beauty of freshwater ornamental fish with the world.

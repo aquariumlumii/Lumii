@@ -9,10 +9,10 @@ const ContactUsPage: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
         <div className="text-center mb-16">
-          <h1 className="text-6xl font-extrabold text-white mb-4 leading-tight">
+          <h1 className="text-3xl font-extrabold text-white mb-4 leading-tight">
             Get in Touch
           </h1>
-          <p className="text-2xl text-gray-400 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-400 max-w-3xl mx-auto">
             We are here to support our partners and clients worldwide. Whether you are interested in importing our freshwater 
             ornamental fish, exploring a long-term partnership, or have specific inquiries about export arrangements, 
             we welcome your message. Reach out today—we look forward to connecting with you.

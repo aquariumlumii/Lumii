@@ -103,7 +103,7 @@ const OurFarmsPage = () => {
             <div className="lg:w-1/2 text-center lg:text-left">
               <h3 className="text-3xl font-bold text-white mb-2">Breeding and Care</h3>
               {/* <p className="text-gray-400 mb-4">Location: Northern California</p> */}
-              <p className="text-lg text-gray-300 text-justify">
+              <p className="text-lg text-gray-300 lg:text-justify">
 At Lumii Farm, every fish begins its journey in a carefully managed freshwater environment. 
 Our breeding facilities are designed to provide the right balance of natural water, nutrition, and care, 
 ensuring that fish grow strong, calm, and disease-free. From the earliest stages of life, we monitor their 
@@ -118,7 +118,7 @@ each species to mature within the right timeframe, maintaining health and beauty
             <div className="lg:w-1/2 text-center lg:text-right">
               <h3 className="text-3xl font-bold text-white mb-2">Community Engagement</h3>
               {/* <p className="text-gray-400 mb-4">Location: Florida Keys</p> */}
-              <p className="text-lg text-gray-300 text-justify">
+              <p className="text-lg text-gray-300 lg:text-justify">
 In addition to breeding at our own facilities, Lumii works closely with selected households who raise fish 
 for us under natural conditions. We provide fishlings to these communities and conduct monthly inspections 
 to ensure proper care, water quality, and healthy growth. Priority is always given to families with natural 
@@ -151,7 +151,7 @@ we create opportunities for local communities while maintaining strict standards
             <div className="lg:w-1/2 text-center lg:text-left">
               <h3 className="text-3xl font-bold text-white mb-2">Quarantine and Health Assurance</h3>
               {/* <p className="text-gray-400 mb-4">Location: New York</p> */}
-              <p className="text-lg text-gray-300 text-justify">
+              <p className="text-lg text-gray-300 lg:text-justify">
 Before export, all fish pass through our dedicated quarantine center for a minimum of three weeks. 
 During this period, they are carefully observed to ensure they are free from disease, growing to the 
 right maturity, and maintaining calm behavior. Our quarantine process reflects our commitment to 
@@ -162,7 +162,7 @@ This step is central to our promise of delivering only the best.
               <br></br>
 <h3 className="text-3xl font-bold text-white mb-2">Export and Global Standards</h3>
               {/* <p className="text-gray-400 mb-4">Location: Florida Keys</p> */}
-              <p className="text-lg text-gray-300 text-justify">
+              <p className="text-lg text-gray-300 lg:text-justify">
 Once quarantine is complete, fish are carefully prepared for shipment using professional handling and packing techniques
  that safeguard their health throughout transport. Each order is selected, packed, and certified to meet international 
  requirements, ensuring safe delivery to our customers worldwide. At Lumii, we are committed not only to quality but 

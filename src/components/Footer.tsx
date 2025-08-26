@@ -1,13 +1,13 @@
 "use client";
 
-import { MapPin, Mail, Facebook, Instagram, Music2 } from "lucide-react";
+import { MapPin, Mail, Facebook, Instagram, Music2, Phone } from "lucide-react";
 import Image from "next/image";
 import logo from "@/../public/images/logo.png";
 import Link from "next/link";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#12121A] text-gray-400 py-12 px-4 md:px-8 font-serif">
+    <footer className="bg-[#12121A] text-gray-400 py-10 px-4 md:px-8 font-serif">
       <div className="max-w-7xl mx-auto">
         {/* Use a 12-column grid for more control over layout */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 text-center md:text-left">
@@ -66,38 +66,55 @@ const Footer = () => {
             </div>
             <div className="flex items-center justify-center md:justify-start space-x-2">
               <Mail className="h-5 w-5 text-cyan-400" />
-              <p className="text-sm">lumii.go2@gmail.com</p>
+              <a
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=lumii.go2@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:underline text-inherit"
+              >
+                <span>lumii.go2@gmail.com</span>
+              </a>
             </div>
           </div>
 
-          {/* Right Section - Social Media (takes up 3 of 12 columns) */}
-          <div className="md:col-span-3 space-y-4">
-            <h3 className="text-xl font-semibold text-white">Follow Us</h3>
-            <p className="text-sm">
-              Stay connected with us on our journey to create the best aquatic
-              environments.
-            </p>
-            <div className="flex justify-center md:justify-start space-x-4">
-              <a
-                href="https://www.facebook.com/share/1DH9zpprdc/"
-                className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
-              >
-                <Facebook className="w-6 h-6" />
-              </a>
-              <a
-                href="https://www.instagram.com/lumii__aquarium_/"
-                className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
-              >
-                <Instagram className="w-6 h-6" />
-              </a>
-              <a
-                href="https://www.tiktok.com/@lumii__aquarium_?_t=ZS-8z1vQaISUr4&_r=1"
-                className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
-              >
-                <Music2 className="w-6 h-6" />
-              </a>
-            </div>
-          </div>
+{/* Right Section - Social Media (takes up 3 of 12 columns) */}
+<div className="md:col-span-3 space-y-4">
+  <h3 className="text-xl font-semibold text-white">Follow Us</h3>
+  <p className="text-sm">
+    Stay connected with us on our journey to create the best aquatic
+    environments.
+  </p>
+  <div className="flex justify-center md:justify-start space-x-4">
+    <a
+      href="https://www.facebook.com/share/1DH9zpprdc/"
+      className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
+    >
+      <Facebook className="w-6 h-6" />
+    </a>
+    <a
+      href="https://www.instagram.com/lumii__aquarium_/"
+      className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
+    >
+      <Instagram className="w-6 h-6" />
+    </a>
+    <a
+      href="https://www.tiktok.com/@lumii__aquarium_?_t=ZS-8z1vQaISUr4&_r=1"
+      className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
+    >
+      <Music2 className="w-6 h-6" />
+    </a>
+    {/* WhatsApp Icon */}
+    <a
+      href="https://wa.me/94765304602"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
+    >
+      <Phone className="w-6 h-6" />
+    </a>
+  </div>
+</div>
+
         </div>
 
         {/* Bottom Section - Copyright Notice */}
@@ -112,6 +129,7 @@ const Footer = () => {
 };
 
 export default Footer;
+
 
 // "use client";
 

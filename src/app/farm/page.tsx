@@ -54,10 +54,10 @@ const Counter = ({ target, duration = 2000 }: { target: number; duration?: numbe
 const OurFarmsPage = () => {
   return (
     <div className="bg-[#0A0A10] text-gray-200 min-h-screen font-serif">
-      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-1">
         
         {/* Hero Section */}
-        <div className="relative text-center mb-20">
+        <div className="relative text-center mb-8">
           <div className="relative h-[70vh] w-full rounded-3xl overflow-hidden shadow-2xl">
             <Image
               src="/images/sample-15.jpeg"
@@ -86,8 +86,8 @@ const OurFarmsPage = () => {
           </div>
         </div>
         {/* Meet Our Facilities Section */}
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white mb-16">Meet Our Breeding Facilities</h2>
+        <div className="text-center mb-8">
+          <h2 className="text-4xl font-bold text-white mb-8">Meet Our Breeding Facilities</h2>
           
           {/* Facility 1 */}
           <div className="flex flex-col lg:flex-row items-center gap-8 mb-16">

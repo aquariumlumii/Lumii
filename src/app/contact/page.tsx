@@ -1,14 +1,14 @@
 'use client';
 
 import Image from 'next/image';
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 const ContactUsPage: React.FC = () => {
   return (
-    <div className="bg-[#0A0A10] text-gray-200 min-h-screen font-serif">
+    <div className="bg-[#0A0A10] text-gray-200 pt-8 font-serif">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
 
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           <h1 className="text-4xl font-extrabold text-white mb-4 leading-tight">
             Get in Touch
           </h1>
@@ -39,6 +39,7 @@ const ContactUsPage: React.FC = () => {
 
               <div className="space-y-6">
 
+                {/* Email */}
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center mr-4">
                     <Mail className="h-4 w-4 text-white" />
@@ -54,21 +55,25 @@ const ContactUsPage: React.FC = () => {
                   </div>
                 </div>
 
-                {/* <div className="flex items-start">
+                {/* WhatsApp */}
+                <div className="flex items-start">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center mr-4">
                     <Phone className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-white">Phone</h3>
+                    <h3 className="text-xl font-semibold text-white">WhatsApp</h3>
                     <a
-                      href="tel:+94771234567"
+                      href="https://wa.me/94765304602"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="text-gray-400 hover:text-cyan-500"
                     >
-                      +94 77 123 4567
+                      +94 76 530 4602
                     </a>
                   </div>
-                </div> */}
+                </div>
 
+                {/* Address */}
                 <div className="flex items-start">
                   <div className="flex-shrink-0 w-8 h-8 rounded-full bg-cyan-500 flex items-center justify-center mr-4">
                     <MapPin className="h-4 w-4 text-white" />
@@ -84,6 +89,7 @@ const ContactUsPage: React.FC = () => {
                     </p>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>

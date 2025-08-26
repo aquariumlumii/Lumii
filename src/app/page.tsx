@@ -159,10 +159,10 @@ const HomePage = () => {
           </section>
 
           {/* Other Sections */}
-          <section className="py-20 bg-[#0c0c0c]">
+          <section className="py-10 bg-[#0c0c0c]">
               <h2 className="text-4xl font-bold font-serif text-white mb-4 text-center">Welcome to Lumii Aquarium</h2>
 
-                            <div className="flex flex-col font-serif px-4 sm:px-6 lg:flex-row items-center gap-12 lg:gap-24 my-24 text-center mb-12">
+                            <div className="flex flex-col font-serif px-4 sm:px-6 lg:flex-row items-center gap-12 lg:gap-24 my-10 text-center mb-2">
                               <div className="lg:w-1/2">
                                 
                                 <p className="text-lg text-gray-300 mb-4 lg:text-justify">

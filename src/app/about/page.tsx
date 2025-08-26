@@ -5,10 +5,10 @@ import { FaTiktok } from 'react-icons/fa'; // Added TikTok icon
 const AboutUsPage = () => { 
   return (
     <div className="bg-[#0A0A10] text-gray-200 min-h-screen font-serif">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-24">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-10">
         
         {/* About Us */}
-        <section className="flex flex-col lg:flex-row items-center gap-8 border-b border-gray-700 pb-12 pt-12">
+        <section className="flex flex-col lg:flex-row items-center gap-8 border-b border-gray-700 pb-8 pt-8">
           <div className="flex-1 text-center lg:text-left">
             <h1 className="text-5xl font-bold text-white mb-4">Who We Are</h1>
             <p className="text-lg text-gray-300 mb-4 lg:text-justify">
@@ -30,7 +30,7 @@ const AboutUsPage = () => {
         </section>
 
         {/* Our Mission */}
-        <section className="flex flex-col-reverse lg:flex-row items-center gap-8 border-b border-gray-700 pb-12">
+        <section className="flex flex-col-reverse lg:flex-row items-center gap-8 border-b border-gray-700 pb-8">
           <div className="flex-1">
             <Image
               src="/images/sample-14.jpg"

@@ -95,7 +95,7 @@ const AboutUsPage = () => {
             <a href="https://www.instagram.com/lumii__aquarium_/" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400 transition">
               <Instagram size={32} />
             </a>
-            <a href="https://www.tiktok.com/@lumii__aquarium_?_t=ZS-8z1vQaISUr4&_r=1" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition">
+            <a href="https://www.tiktok.com/@lumii__aquarium_?_t=ZS-8z1vQaISUr4&_r=1" target="_blank" rel="noopener noreferrer" className="hover:text-green-400 transition">
               <FaTiktok size={32} />
             </a>
           </div>

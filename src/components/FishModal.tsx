@@ -118,14 +118,13 @@ export const FishModal = ({ fish, onClose }: FishModalProps) => {
           h-[75vh] sm:h-[65vh] md:h-[80vh]"
       >
         {/* Close Button */}
-        <button
-          onClick={onClose}
-          className="absolute top-3 right-3 text-gray-500 hover:text-black z-10"
-          aria-label="Close fish details"
-        >
-          <X size={28} />
-        </button>
-
+<button
+  onClick={onClose}
+  className="absolute top-3 right-3 z-10 p-1 rounded-full bg-black/50 text-white hover:bg-black/70 transition-colors"
+  aria-label="Close fish details"
+>
+  <X size={28} />
+</button>
         {/* Image */}
         <div className="relative flex-[4] w-full">
           <Image

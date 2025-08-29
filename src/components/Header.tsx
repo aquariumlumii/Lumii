@@ -101,7 +101,7 @@
 //           {/* Desktop Contact Info */}
 //           <div className="hidden md:flex items-center space-x-2">
 //             <Mail size={20} className="text-teal-300" />
-//             <span>lumii.go2@gmail.com</span>
+//             <span>lumi.aqua@gmail.com</span>
 //           </div>
 
 //           {/* Mobile Menu Button */}
@@ -137,7 +137,7 @@
 //           </nav>
 //           <div className="flex items-center space-x-2 text-lg">
 //             <Mail size={24} className="text-teal-300" />
-//             <span>lumii.go2@gmail.com</span>
+//             <span>lumi.aqua@gmail.com</span>
 //           </div>
 //         </div>
 //       </div>
@@ -237,17 +237,17 @@ const Header = () => {
           {/* Desktop Contact Info */}
           {/* <div className="hidden md:flex items-center space-x-2">
             <Mail size={20} className="text-teal-300" />
-            <span>lumii.go2@gmail.com</span>
+            <span>lumi.aqua@gmail.com</span>
           </div> */}
  <div className="hidden md:flex items-center space-x-2">
   <a
-    href="https://mail.google.com/mail/?view=cm&fs=1&to=lumii.go2@gmail.com"
+    href="https://mail.google.com/mail/?view=cm&fs=1&to=lumi.aqua@gmail.com"
     target="_blank"
     rel="noopener noreferrer"
     className="flex items-center space-x-2 hover:underline text-inherit"
   >
     <Mail size={20} className="text-teal-300" />
-    <span>lumii.go2@gmail.com</span>
+    <span>lumi.aqua@gmail.com</span>
   </a>
 </div>
 
@@ -285,7 +285,7 @@ const Header = () => {
           </nav>
           <div className="flex items-center space-x-2 text-lg">
             <Mail size={24} className="text-teal-300" />
-            <span>lumii.go2@gmail.com</span>
+            <span>lumi.aqua@gmail.com</span>
           </div>
         </div>
       </div>

@@ -67,12 +67,12 @@ const Footer = () => {
             <div className="flex items-center justify-center md:justify-start space-x-2">
               <Mail className="h-5 w-5 text-cyan-400" />
               <a
-                href="https://mail.google.com/mail/?view=cm&fs=1&to=lumii.go2@gmail.com"
+                href="https://mail.google.com/mail/?view=cm&fs=1&to=lumi.aqua@gmail.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 hover:underline text-inherit"
               >
-                <span>lumii.go2@gmail.com</span>
+                <span>lumi.aqua@gmail.com</span>
               </a>
             </div>
           </div>
@@ -84,37 +84,36 @@ const Footer = () => {
     Stay connected with us on our journey to create the best aquatic
     environments.
   </p>
-  <div className="flex justify-center md:justify-start space-x-4">
-    <a
-      href="https://www.facebook.com/share/1DH9zpprdc/"
-      className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
-    >
-      <Facebook className="w-6 h-6" />
-    </a>
-    <a
-      href="https://www.instagram.com/lumii__aquarium_/"
-      className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
-    >
-      <Instagram className="w-6 h-6" />
-    </a>
-    <a
-      href="https://www.tiktok.com/@lumii__aquarium_?_t=ZS-8z1vQaISUr4&_r=1"
-      className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
-    >
-      <Music2 className="w-6 h-6" />
-    </a>
-    {/* WhatsApp Icon */}
-    <a
-      href="https://wa.me/94765304602"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-cyan-500 hover:text-cyan-400 transition-colors duration-300"
-    >
-      <Phone className="w-6 h-6" />
-    </a>
-  </div>
-</div>
-
+      <div className="flex justify-center md:justify-start space-x-4">
+        <a
+          href="https://www.facebook.com/share/1DH9zpprdc/"
+          className="text-cyan-500 hover:text-white transition-colors duration-300"
+        >
+          <Facebook className="w-6 h-6" />
+        </a>
+        <a
+          href="https://www.instagram.com/lumii__aquarium_/"
+          className="text-cyan-500 hover:text-white transition-colors duration-300"
+        >
+          <Instagram className="w-6 h-6" />
+        </a>
+        <a
+          href="https://www.tiktok.com/@lumii__aquarium_?_t=ZS-8z1vQaISUr4&_r=1"
+          className="text-cyan-500 hover:text-white transition-colors duration-300"
+        >
+          <Music2 className="w-6 h-6" />
+        </a>
+        {/* WhatsApp Icon */}
+        <a
+          href="https://wa.me/94765304602"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-cyan-500 hover:text-white transition-colors duration-300"
+        >
+          <Phone className="w-6 h-6" />
+        </a>
+      </div>
+    </div>
         </div>
 
         {/* Bottom Section - Copyright Notice */}
@@ -206,7 +205,7 @@ export default Footer;
 //           {/* Email */}
 //           <div className="flex items-center justify-center md:justify-start space-x-2">
 //             <Mail className="h-5 w-5 text-cyan-400" />
-//             <p className="text-sm">lumii.go2@gmail.com</p>
+//             <p className="text-sm">lumi.aqua@gmail.com</p>
 //           </div>
 //         </div>
 

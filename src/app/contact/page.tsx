@@ -6,7 +6,7 @@ import { Mail, MapPin, Phone } from "lucide-react";
 const ContactUsPage: React.FC = () => {
   return (
     <div className="bg-[#0A0A10] text-gray-200 pt-8 font-serif">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
 
         <div className="text-center mb-8">
           <h1 className="text-4xl font-extrabold text-white mb-4 leading-tight">
@@ -20,7 +20,7 @@ const ContactUsPage: React.FC = () => {
         </div>
 
         <div className="bg-[#181820] p-8 rounded-xl shadow-2xl">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
 
             <div className="rounded-xl">
               <Image
@@ -33,9 +33,10 @@ const ContactUsPage: React.FC = () => {
             </div>
 
             <div className="bg-[#181820] p-8 rounded-xl">
-              <h2 className="text-3xl font-bold text-white mb-6">
-                Contact Information
-              </h2>
+              <h2 className="text-3xl font-bold text-white mb-6 text-center sm:text-left">
+  Contact Information
+</h2>
+
 
               <div className="space-y-6">
 
@@ -47,10 +48,10 @@ const ContactUsPage: React.FC = () => {
                   <div>
                     <h3 className="text-xl font-semibold text-white">Email</h3>
                     <a
-                      href="mailto:lumii.go2@gmail.com"
+                      href="mailto:lumi.aqua@gmail.com"
                       className="text-gray-400 hover:text-cyan-500"
                     >
-                      lumii.go2@gmail.com
+                      lumi.aqua@gmail.com
                     </a>
                   </div>
                 </div>

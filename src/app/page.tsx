@@ -179,7 +179,7 @@ const HomePage = () => {
                               </div>
                               <div className="lg:w-1/2">
                                 <Image
-                                  src="/images/catfish.jpg"
+                                  src="/images/twofish.jpg"
                                   alt="Our Story"
                                   width={600}
                                   height={400}

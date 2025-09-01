@@ -198,8 +198,8 @@ const slides = [
   },
     {
     id: 3,
-    bg: "/images/bg 7.jpg",
-    // fg: "/images/fg 11.png",
+    bg: "/images/bg 8.png",
+    fg: "/images/bg14.png",
     title: "Where Quality Reaches the World",
     text: "Exporting premium ornamental fish, raised with care in Sri Lanka, ready to bring color and elegance to aquariums everywhere.",
     button: "View Collection",
